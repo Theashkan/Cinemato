@@ -1,0 +1,57 @@
+
+
+
+.h-genre{
+    position: absolute;
+    color: #65a5e0;
+    font-size: 20px;
+    margin-left: 20rem;
+    top: 200px;
+}
+
+.h-created{
+    position: absolute;
+    color: #65a5e0;
+    font-size: 20px;
+    margin-left: 20rem;
+    top: 250px;
+}
+
+.h-write{
+    position: absolute;
+    color: #65a5e0;
+    font-size: 20px;
+    margin-left: 60rem;
+    top: 200px;
+}
+
+.h-release{
+    position: absolute;
+    color: #65a5e0;
+    font-size: 20px;
+    margin-left: 40rem;
+    top: 200px;
+}
+
+.h-language{
+    position: absolute;
+    color: #65a5e0;
+    font-size: 20px;
+    margin-left: 40rem;
+    top: 250px;
+}
+
+.h-body{
+    margin-left: 20rem;
+    position: absolute;
+    top: 320px;
+    color: #557da3;
+    font-size: 15px;
+}
+
+.imdb{
+    position: absolute;
+    left: 45rem;
+    top: 118px;
+    font-size: 30px;
+}

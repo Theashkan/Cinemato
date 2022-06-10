@@ -1,0 +1,25 @@
+<div class="row mt-5 md-10 ">
+    {% for post in posts %}      
+    <div class="col-sm-3">    
+      <div class="card text-center" style="color: #0a4275;">
+          <img src="{{ post.image.url }}" class="card-img-top" alt="" style="height: 500px;">
+          <div class="card-body">
+            <h3 class="card-title">{{ post.title }}</h3>
+            <small class="card-subtitle text-muted"> {{ post.published_at|timesince }} by {{ post.author }}</small>
+            <p class="card-text text-dark">{{ post.body|truncatechars:130 }}</p>
+            <div class="card-subtitle text-muted mb-2"> 
+              
+              {% for tag in post.tags.all %}
+              <a href="{% url 'post:tag_view' tag.slug %}"  style="color: rgb(126, 125, 125);">
+                #{{ tag.slug}}
+              </a>
+                
+              {% endfor %}
+                
+            </div>
+            <a  class="btn btn-primary" role="button" href="{{ post.get_absolute_url }}"> Download</a>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>

@@ -1,0 +1,35 @@
+
+  <div
+  class="p-5 text-center bg-image"
+  style="
+    background-image: url('{{ first.img.url }}');
+    height: 550px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+  "
+  >
+  <div class="mask"  style="background-color: rgba(0, 0, 0, 0.6);" >
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">{{ first.title }}</h1>
+        <h4 class="mb-3">{{ first.body|truncatechars:50 }}</h4>
+        <div class="card-subtitle mb-2">
+          {% for tag in first.tags.all %}
+          <a class="text-white" href="{% url 'post:tag_view' tag.slug %}">
+            #{{ tag.slug }}
+          </a>
+          {% endfor %}
+
+        </div>
+        <a class="btn btn-outline-light btn-lg" 
+        href = "{{ first.get_absolute_url }}" 
+        role="button"
+        >Read more</a
+        >
+      </div>
+    </div>
+  </div>
+  </div>
+  </header>

@@ -1,0 +1,16 @@
+{% extends 'Posts/Layouts/base.html' %}
+
+{% block title %}
+  Home
+{% endblock title %}
+{% block content %}
+
+{% load my_tags %}
+{% get_last_post %}
+{% include 'Posts/Components/Card.html' %}
+{% include 'Posts/Components/Pagination.html' with page_obj=posts %}
+{% endblock content %}  
+
+
+
+

@@ -1,0 +1,36 @@
+<style>
+    .link-muted { color: #aaa; } .link-muted:hover { color: #1266f1; }
+</style>
+
+<section style="background-color: #c8cdd681;" >
+    <h1 class = "text-gray pt-3">Comments </h1>
+    <div class="container my-5  text-dark">
+        {% for comment in comments  %} 
+      <div class="row d-flex justify-content-center">
+          
+           
+        <div class="col-md-12 col-lg-10 col-xl-8">
+            <div class="d-flex  flex-start mb-4">
+              <div class="card w-100">
+                <div class="card-body p-4">
+                  <div>
+                    <h5c class="text-primary">{{ comment.name|title }}</h5c>
+                    <p class="small text-muted">{{ comment.created_at|timesince}} ago </p>
+                    <p>
+                          {{ comment.body }}
+                    </p>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              
+      </div>
+      {% empty %}
+      This post dont have any comments !
+      {% endfor %}
+    </div>
+  </section>

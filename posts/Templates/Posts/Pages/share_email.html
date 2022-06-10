@@ -1,0 +1,63 @@
+{% extends 'Posts/Layouts/base.html' %}
+
+
+
+
+{% block title %}
+   share {{post.title}}
+{% endblock title %}
+
+
+  
+
+
+
+
+{% block content %}
+<img
+src="{{ post.image.url }}"
+class="img-fluid shadow-2-strong"
+alt="Palm Springs Road"
+id="img-email"
+/>
+
+<h1  
+style = "
+color: rgb(45, 122, 199);
+margin-left: 450px;
+margin-bottom: 20px;">
+{{ post.title }}</h1>
+
+<form style="width: 1000px; padding-left: 450px;" method="POST" novalidate >
+  {% csrf_token %}
+  {{ share_form.non_field_errors }}
+    <!-- Subject input -->
+    <div class="form-outline mb-4">
+      {{ share_form.subject.errors }}
+      {{ share_form.subject }}
+      <label class="form-label" for="{{ share_form.subject.id_for_label }}">Subject</label>
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      {{ share_form.email.errors }}
+      {{ share_form.email }}
+      <label class="form-label" for="{{ share_form.email.id_for_label }}">Email address</label>
+    </div>
+  
+    <!-- Message input -->
+    <div class="form-outline mb-4">
+      {{ share_form.message.errors }}
+      {{ share_form.message }}
+      <label class="form-label" for="{{ share_form.message.id_for_label }}">Message</label>
+    </div>
+  
+
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+  </form>
+{% endblock content %}
+
+  
+

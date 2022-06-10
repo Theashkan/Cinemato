@@ -1,0 +1,31 @@
+
+<section style="background-color: #eee; width: 1430px; border-radius: 10px; ">
+    <form method="POST" class="container py-5 text-dark" novalidate>
+        <h1 class = "text-gray">Creat new comment</h1>
+        {% csrf_token %}
+        {{ comment_form.non_field_errors }}
+    <div class="form-outline mb-4">
+        {{ comment_form.name.errors }}
+        {{ comment_form.name }}
+        <label class="form-label" for="{{ comment_form.name.id_for_label }}">Name</label>
+      </div>
+
+      <div class="form-outline mb-4">
+        {{ comment_form.email.errors }}
+        {{ comment_form.email }}
+        <label class="form-label" for="{{ comment_form.email.id_for_label }}">Email address</label>
+      </div>
+    
+
+      <div class="form-outline mb-4">
+        {{ comment_form.body.errors }}
+        {{ comment_form.body }}
+        <label class="form-label" for="{{ comment_form.body.id_for_label }}">Body</label>
+      </div>
+    
+  
+    
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">Send</button> 
+    </form>
+</section>
