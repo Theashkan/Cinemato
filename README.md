@@ -5,7 +5,7 @@
 My first big project with Django 
 
 ## Features 
-* [Send email](#Send email)
+* [Send_email](#Send email)
 * [Comment](#Comment)
 * [Tag](#Tag)
 * [Pageination](#UI)
