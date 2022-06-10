@@ -9,7 +9,7 @@ My first big project with Django
 * [Comment](#Comment)
 * [Tag](#Tag)
 * [Pageination](#UI)
-* [Share]
+* [Share](#Send email)
 
 ## Send email
 <img width="1440" alt="Screen Shot 2022-06-11 at 12 03 53 AM" src="https://user-images.githubusercontent.com/73990701/173138413-4ff84e71-e13f-4852-baf1-e8fec8288034.png">
