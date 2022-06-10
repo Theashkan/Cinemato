@@ -8,7 +8,7 @@ My first big project with Django
 
 * [Send email](#Send email)
 * [Comment](#Comment)
-* [Tag](#Tag) with taggit-django
+* [Tag](#Tag)
 * [Pageination](#UI)
 
 ## Send email
